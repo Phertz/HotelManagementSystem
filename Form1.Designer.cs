@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.txtDocumento = new System.Windows.Forms.TextBox();
@@ -54,6 +50,10 @@
             this.txtNumeroQuarto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblnquarto = new System.Windows.Forms.Label();
+            this.NomeColuna = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sobre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,133 +62,126 @@
             this.dgvReservas.AllowUserToOrderColumns = true;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3,
-            this.Coluna4});
-            this.dgvReservas.Location = new System.Drawing.Point(850, 12);
+            this.NomeColuna,
+            this.Sobre,
+            this.Telefone,
+            this.Email});
+            this.dgvReservas.Location = new System.Drawing.Point(1133, 15);
+            this.dgvReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(406, 150);
+            this.dgvReservas.RowHeadersWidth = 51;
+            this.dgvReservas.Size = new System.Drawing.Size(541, 185);
             this.dgvReservas.TabIndex = 1;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Column1";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Column1";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Column1";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Column1";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
+            this.dgvReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellContentClick);
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(434, 60);
+            this.txtNome.Location = new System.Drawing.Point(579, 74);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(280, 20);
+            this.txtNome.Size = new System.Drawing.Size(372, 22);
             this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.Location = new System.Drawing.Point(434, 113);
+            this.txtSobrenome.Location = new System.Drawing.Point(579, 139);
+            this.txtSobrenome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(280, 20);
+            this.txtSobrenome.Size = new System.Drawing.Size(372, 22);
             this.txtSobrenome.TabIndex = 3;
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(434, 157);
+            this.txtDocumento.Location = new System.Drawing.Point(579, 193);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(280, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(372, 22);
             this.txtDocumento.TabIndex = 4;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(434, 203);
+            this.txtTelefone.Location = new System.Drawing.Point(579, 250);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(280, 20);
+            this.txtTelefone.Size = new System.Drawing.Size(372, 22);
             this.txtTelefone.TabIndex = 5;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(434, 254);
+            this.txtEmail.Location = new System.Drawing.Point(579, 313);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(280, 20);
+            this.txtEmail.Size = new System.Drawing.Size(372, 22);
             this.txtEmail.TabIndex = 6;
             // 
             // lblnome
             // 
             this.lblnome.AutoSize = true;
-            this.lblnome.Location = new System.Drawing.Point(393, 67);
+            this.lblnome.Location = new System.Drawing.Point(524, 82);
+            this.lblnome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnome.Name = "lblnome";
-            this.lblnome.Size = new System.Drawing.Size(35, 13);
+            this.lblnome.Size = new System.Drawing.Size(44, 16);
             this.lblnome.TabIndex = 7;
             this.lblnome.Text = "Nome";
             // 
             // lblsobre
             // 
             this.lblsobre.AutoSize = true;
-            this.lblsobre.Location = new System.Drawing.Point(393, 116);
+            this.lblsobre.Location = new System.Drawing.Point(524, 143);
+            this.lblsobre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblsobre.Name = "lblsobre";
-            this.lblsobre.Size = new System.Drawing.Size(35, 13);
+            this.lblsobre.Size = new System.Drawing.Size(44, 16);
             this.lblsobre.TabIndex = 8;
             this.lblsobre.Text = "Sobre";
             // 
             // lbldoc
             // 
             this.lbldoc.AutoSize = true;
-            this.lbldoc.Location = new System.Drawing.Point(345, 164);
+            this.lbldoc.Location = new System.Drawing.Point(460, 202);
+            this.lbldoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldoc.Name = "lbldoc";
-            this.lbldoc.Size = new System.Drawing.Size(83, 13);
+            this.lbldoc.Size = new System.Drawing.Size(102, 16);
             this.lbldoc.TabIndex = 9;
             this.lbldoc.Text = "Doc. Identidade";
             // 
             // lbltel
             // 
             this.lbltel.AutoSize = true;
-            this.lbltel.Location = new System.Drawing.Point(379, 206);
+            this.lbltel.Location = new System.Drawing.Point(505, 254);
+            this.lbltel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltel.Name = "lbltel";
-            this.lbltel.Size = new System.Drawing.Size(49, 13);
+            this.lbltel.Size = new System.Drawing.Size(61, 16);
             this.lbltel.TabIndex = 10;
             this.lbltel.Text = "Telefone";
             // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(379, 261);
+            this.lblemail.Location = new System.Drawing.Point(505, 321);
+            this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(35, 13);
+            this.lblemail.Size = new System.Drawing.Size(45, 16);
             this.lblemail.TabIndex = 11;
             this.lblemail.Text = "E-mail";
             // 
             // btnregistrarHospede
             // 
-            this.btnregistrarHospede.Location = new System.Drawing.Point(534, 305);
+            this.btnregistrarHospede.Location = new System.Drawing.Point(712, 375);
+            this.btnregistrarHospede.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnregistrarHospede.Name = "btnregistrarHospede";
-            this.btnregistrarHospede.Size = new System.Drawing.Size(93, 23);
+            this.btnregistrarHospede.Size = new System.Drawing.Size(124, 28);
             this.btnregistrarHospede.TabIndex = 12;
             this.btnregistrarHospede.Text = "Registrar";
             this.btnregistrarHospede.UseVisualStyleBackColor = true;
+            this.btnregistrarHospede.Click += new System.EventHandler(this.btnregistrarHospede_Click_1);
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.monthCalendar1.Location = new System.Drawing.Point(31, 41);
+            this.monthCalendar1.Location = new System.Drawing.Point(41, 50);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 13;
             this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.Highlight;
@@ -196,81 +189,126 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(531, 12);
+            this.label1.Location = new System.Drawing.Point(708, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 11;
             this.label1.Text = "REGISTRO";
             // 
             // btnFazerReserva
             // 
-            this.btnFazerReserva.Location = new System.Drawing.Point(1124, 278);
+            this.btnFazerReserva.Location = new System.Drawing.Point(1499, 533);
+            this.btnFazerReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFazerReserva.Name = "btnFazerReserva";
-            this.btnFazerReserva.Size = new System.Drawing.Size(93, 23);
+            this.btnFazerReserva.Size = new System.Drawing.Size(124, 28);
             this.btnFazerReserva.TabIndex = 14;
             this.btnFazerReserva.Text = "Reserva";
             this.btnFazerReserva.UseVisualStyleBackColor = true;
+            this.btnFazerReserva.Click += new System.EventHandler(this.btnFazerReserva_Click_1);
             // 
             // btnListarReservas
             // 
-            this.btnListarReservas.Location = new System.Drawing.Point(944, 184);
+            this.btnListarReservas.Location = new System.Drawing.Point(1259, 226);
+            this.btnListarReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListarReservas.Name = "btnListarReservas";
-            this.btnListarReservas.Size = new System.Drawing.Size(93, 23);
+            this.btnListarReservas.Size = new System.Drawing.Size(124, 28);
             this.btnListarReservas.TabIndex = 15;
             this.btnListarReservas.Text = "Listar Reservas";
             this.btnListarReservas.UseVisualStyleBackColor = true;
+            this.btnListarReservas.Click += new System.EventHandler(this.btnListarReservas_Click_1);
             // 
             // dtpCheckIn
             // 
-            this.dtpCheckIn.Location = new System.Drawing.Point(1078, 183);
+            this.dtpCheckIn.Location = new System.Drawing.Point(1437, 225);
+            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckIn.Size = new System.Drawing.Size(265, 22);
             this.dtpCheckIn.TabIndex = 16;
+            this.dtpCheckIn.ValueChanged += new System.EventHandler(this.dtpCheckIn_ValueChanged);
             // 
             // dtpCheckOut
             // 
-            this.dtpCheckOut.Location = new System.Drawing.Point(1078, 221);
+            this.dtpCheckOut.Location = new System.Drawing.Point(1437, 272);
+            this.dtpCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(200, 20);
+            this.dtpCheckOut.Size = new System.Drawing.Size(265, 22);
             this.dtpCheckOut.TabIndex = 17;
             // 
             // txtDocumentoHospede
             // 
-            this.txtDocumentoHospede.Location = new System.Drawing.Point(1124, 345);
+            this.txtDocumentoHospede.Location = new System.Drawing.Point(1499, 425);
+            this.txtDocumentoHospede.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDocumentoHospede.Name = "txtDocumentoHospede";
-            this.txtDocumentoHospede.Size = new System.Drawing.Size(100, 20);
+            this.txtDocumentoHospede.Size = new System.Drawing.Size(132, 22);
             this.txtDocumentoHospede.TabIndex = 18;
             // 
             // txtNumeroQuarto
             // 
-            this.txtNumeroQuarto.Location = new System.Drawing.Point(1124, 389);
+            this.txtNumeroQuarto.Location = new System.Drawing.Point(1499, 479);
+            this.txtNumeroQuarto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumeroQuarto.Name = "txtNumeroQuarto";
-            this.txtNumeroQuarto.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeroQuarto.Size = new System.Drawing.Size(132, 22);
             this.txtNumeroQuarto.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1027, 352);
+            this.label2.Location = new System.Drawing.Point(1369, 433);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "documento valido";
             // 
             // lblnquarto
             // 
             this.lblnquarto.AutoSize = true;
-            this.lblnquarto.Location = new System.Drawing.Point(1049, 389);
+            this.lblnquarto.Location = new System.Drawing.Point(1399, 479);
+            this.lblnquarto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnquarto.Name = "lblnquarto";
-            this.lblnquarto.Size = new System.Drawing.Size(69, 13);
+            this.lblnquarto.Size = new System.Drawing.Size(84, 16);
             this.lblnquarto.TabIndex = 21;
             this.lblnquarto.Text = "Nº do Quarto";
             // 
+            // NomeColuna
+            // 
+            this.NomeColuna.DataPropertyName = "NomeData";
+            this.NomeColuna.HeaderText = "Nome";
+            this.NomeColuna.MinimumWidth = 6;
+            this.NomeColuna.Name = "NomeColuna";
+            this.NomeColuna.ReadOnly = true;
+            this.NomeColuna.Width = 125;
+            // 
+            // Sobre
+            // 
+            this.Sobre.HeaderText = "Sobre";
+            this.Sobre.MinimumWidth = 6;
+            this.Sobre.Name = "Sobre";
+            this.Sobre.ReadOnly = true;
+            this.Sobre.Width = 125;
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.MinimumWidth = 6;
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            this.Telefone.Width = 125;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 125;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 653);
+            this.ClientSize = new System.Drawing.Size(1720, 804);
             this.Controls.Add(this.lblnquarto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNumeroQuarto);
@@ -293,6 +331,7 @@
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dgvReservas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
@@ -303,10 +342,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvReservas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.TextBox txtTelefone;
@@ -328,6 +363,10 @@
         private System.Windows.Forms.TextBox txtNumeroQuarto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblnquarto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeColuna;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sobre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
 

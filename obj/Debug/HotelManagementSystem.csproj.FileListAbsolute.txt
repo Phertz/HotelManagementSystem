@@ -8,3 +8,13 @@ C:\Users\Utilizador\Desktop\Minha classe\HotelManagementSystem\obj\Debug\HotelMa
 C:\Users\Utilizador\Desktop\Minha classe\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Utilizador\Desktop\Minha classe\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
 C:\Users\Utilizador\Desktop\Minha classe\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\jhona\source\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe.config
+C:\Users\jhona\source\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe
+C:\Users\jhona\source\HotelManagementSystem\bin\Debug\HotelManagementSystem.pdb
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.AssemblyReference.cache
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.Form1.resources
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.Properties.Resources.resources
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.GenerateResource.cache
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
+C:\Users\jhona\source\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
